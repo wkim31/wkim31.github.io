@@ -52,6 +52,7 @@ d3.csv("https://raw.githubusercontent.com/data1500/data1500.github.io/main/provi
                     .attr("r", 20)
                 
                 let rounded = Math.round(d.avgHigh * 10)/10 + "°F";
+                
                 d3.select("#myTooltip")
                     .html(rounded);
             })
