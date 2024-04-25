@@ -31,6 +31,10 @@ d3.csv("https://raw.githubusercontent.com/data1500/data1500.github.io/main/provi
     svg.append("g")
         .call(d3.axisLeft(y));
 
+    let colors = d3.scaleLinear()
+        .domain([54, 66])
+        .range(["#1f78b4", "#e31a1c"]);
+
     // Add dots
     let dots = svg.append("g")
         .selectAll("dot")
