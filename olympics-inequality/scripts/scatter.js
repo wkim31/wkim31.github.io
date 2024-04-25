@@ -25,7 +25,7 @@ d3.csv("https://raw.githubusercontent.com/data1500/data1500.github.io/main/provi
 
     // Add Y axis
     let y = d3.scaleLinear()
-        .domain([56, 64])
+        .domain([56, 66])
         .range([ height, 0]);
 
     svg.append("g")
@@ -43,7 +43,7 @@ d3.csv("https://raw.githubusercontent.com/data1500/data1500.github.io/main/provi
         .append("circle")
             .attr("cx", function (d) { return x(d.year); } )
             .attr("cy", function (d) { return y(d.avgHigh); } )
-            .attr("r", 6)
+            .attr("r", 8)
             .style("fill", "#666666")
             .style("opacity", 0.5)
             .style("fill", function (d) { return colors(d.avgHigh); } );
