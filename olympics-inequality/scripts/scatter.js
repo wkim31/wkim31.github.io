@@ -50,8 +50,10 @@ d3.csv("https://raw.githubusercontent.com/data1500/data1500.github.io/main/provi
             .on("mouseover", function() {
                 d3.select(this)
                     .attr("r", 20)
+                
+                let rounded = Math.round(d.avgHigh * 10)/10 + "°F";
                 d3.select("#myTooltip")
-                    .html(d.avgHigh);
+                    .html(rounded);
             })
             .on("mouseout", function() {
                 d3.select(this)
