@@ -49,7 +49,7 @@ d3.csv("https://raw.githubusercontent.com/data1500/data1500.github.io/main/provi
             .style("fill", function (d) { return colors(d.avgHigh); } )
             .on("mouseover", function() {
                 d3.select(this)
-                .attr("r", 20);
+                    .attr("r", 20);
             });
 
 })
