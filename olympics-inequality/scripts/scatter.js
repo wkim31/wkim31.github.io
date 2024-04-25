@@ -44,5 +44,8 @@ d3.csv("https://raw.githubusercontent.com/data1500/data1500.github.io/main/provi
             .attr("cx", function (d) { return x(d.year); } )
             .attr("cy", function (d) { return y(d.avgHigh); } )
             .attr("r", 6)
-            .style("fill", "#666666");
+            .style("fill", "#666666")
+            .style("opacity", 0.5)
+            .style("fill", function (d) { return colors(d.avgHigh); } );
+
 })
