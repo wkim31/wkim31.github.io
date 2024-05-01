@@ -22,9 +22,9 @@ h1, h2 {
 
 .divider {
     height: 2px;
-    background-color: #0081C8;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    background-color: linear-gradient(to right, #ffdaf1, #ff36b3 100%);;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .prose {
