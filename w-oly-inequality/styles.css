@@ -32,6 +32,11 @@ h1, h2 {
     font-family: "Roboto"
 }
 
+.special {
+    height: 11 px;
+    font-family: "Crimson Text"
+}
+
 .custom-style {
     width : 100%;
     max-width: 800px;
