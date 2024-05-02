@@ -43,3 +43,10 @@ h1, h2 {
     margin-left: auto;
     margin-right: auto;
 }
+
+.divider-yellow {
+    height: 2px;
+    background: linear-gradient(to right, #ffffd4, #FCB131 100%);
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
