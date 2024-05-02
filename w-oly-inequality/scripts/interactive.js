@@ -1,17 +1,23 @@
-//JS code to handle hover effect on the map
-
 document.addEventListener('DOMContentLoaded', function () {
     // Define the medal counts
     var medalCounts = {
-        'USA': 5002,
-        'Russia': 3188
+        'usa': 5002,
+        'russia': 3188
     };
 
-    // Load the image using D3.js
-    d3.select('#olympic-map')
+    // Attach event listeners to each country shape
+    d3.selectAll('.country')
         .on('mouseenter', function () {
             // Show tooltip on mouse enter
             tooltip.style('display', 'block');
+
+            // Get the country ID
+            var countryId = d3.select(this).attr('id');
+
+            // If the country is in the medalCounts object, update the tooltip content
+            if (medalCounts.hasOwnProperty(countryId)) {
+                tooltip.html(countryId.toUpperCase() + ': ' + medalCounts[countryId] + ' medals');
+            }
         })
         .on('mousemove', function (event) {
             // Get the coordinates of the mouse pointer
@@ -20,14 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
             // Position the tooltip
             tooltip.style('top', (y + 10) + 'px')
                 .style('left', (x + 10) + 'px');
-
-            // Get the country name from the alt attribute
-            var country = d3.select(this).attr('alt');
-
-            // If the country is in the medalCounts object, update the tooltip content
-            if (medalCounts.hasOwnProperty(country)) {
-                tooltip.html(country + ': ' + medalCounts[country] + ' medals');
-            }
         })
         .on('mouseleave', function () {
             // Hide tooltip on mouse leave
@@ -37,4 +35,3 @@ document.addEventListener('DOMContentLoaded', function () {
     // Get the tooltip element
     var tooltip = d3.select('#tooltip');
 });
-
