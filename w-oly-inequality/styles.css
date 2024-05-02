@@ -13,6 +13,8 @@ img {
 img.medals-image {
     width: 60%;
     max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
     height: auto;
     display: block;
     margin: 0 auto;
