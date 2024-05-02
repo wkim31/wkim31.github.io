@@ -1,6 +1,6 @@
 img, p, h1, h2, .divider, .divider-yellow, .divider-black, .divider-green, .divider-red{
-    width : 120%;
-    max-width: 600px;
+    width : 100%;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
