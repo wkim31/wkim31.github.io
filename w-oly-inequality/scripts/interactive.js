@@ -1,39 +1,40 @@
 //JS code to handle hover effect on the map
 
 document.addEventListener('DOMContentLoaded', function () {
-    
-    var mapImg = document.getElementById('olympic-map');
-    
-    
-    var tooltip = document.getElementById('tooltip');
-
     // Define the medal counts
     var medalCounts = {
         'USA': 5002,
         'Russia': 3188
     };
 
-    //Add mouseover event listener to the map image
-    mapImg.addEventListener('mouseover', function (event) {
-        //Get the country name from the alt attribute of the hovered image
-        var country = event.target.alt;
+    // Load the image using D3.js
+    d3.select('#olympic-map')
+        .on('mouseenter', function () {
+            // Show tooltip on mouse enter
+            tooltip.style('display', 'block');
+        })
+        .on('mousemove', function (event) {
+            // Get the coordinates of the mouse pointer
+            var [x, y] = d3.pointer(event);
 
-        
-        if (medalCounts.hasOwnProperty(country)) {
             // Position the tooltip
-            tooltip.style.top = (event.clientY + 10) + 'px';
-            tooltip.style.left = (event.clientX + 10) + 'px';
+            tooltip.style('top', (y + 10) + 'px')
+                .style('left', (x + 10) + 'px');
 
-            
-            tooltip.textContent = country + ': ' + medalCounts[country] + ' medals';
+            // Get the country name from the alt attribute
+            var country = d3.select(this).attr('alt');
 
-            // Show the tooltip
-            tooltip.style.display = 'block';
-        }
-    });
+            // If the country is in the medalCounts object, update the tooltip content
+            if (medalCounts.hasOwnProperty(country)) {
+                tooltip.html(country + ': ' + medalCounts[country] + ' medals');
+            }
+        })
+        .on('mouseleave', function () {
+            // Hide tooltip on mouse leave
+            tooltip.style('display', 'none');
+        });
 
-    // Add mouseout event listener to hide the tooltip when mouse leaves the map image
-    mapImg.addEventListener('mouseout', function () {
-        tooltip.style.display = 'none';
-    });
+    // Get the tooltip element
+    var tooltip = d3.select('#tooltip');
 });
+
