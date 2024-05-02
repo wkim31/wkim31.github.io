@@ -11,7 +11,8 @@ img {
 }
 
 img.medals-image {
-    width: 80%;
+    width: 60%;
+    max-width: 300px;
     height: auto;
     display: block;
     margin: 0 auto;
