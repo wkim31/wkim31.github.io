@@ -1,4 +1,4 @@
-img, p, h1, h2, .divider, .divider-yellow, .divider-black{
+img, p, h1, h2, .divider, .divider-yellow, .divider-black, .divider-green, .divider-red{
     width : 120%;
     max-width: 600px;
     margin-left: auto;
@@ -54,6 +54,20 @@ h1, h2 {
 .divider-black{
     height: 2px;
     background: linear-gradient(to right, #252525, #d9d9d9 100%);
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.divider-green{
+    height: 2px;
+    background: linear-gradient(to right, #31a354, #edf8e9 100%);
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.divider-red{
+    height: 2px;
+    background: linear-gradient(to right, #fee5d9, #de2d26 100%);
     margin-top: 12px;
     margin-bottom: 12px;
 }
