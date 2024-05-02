@@ -3,9 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
     var medalCounts = {
         'usa': 5002,
         'russia': 3188
+        // Add other countries as needed
     };
 
-    // Attach event listeners to each country shape
+    // Attach event listeners to each country path
     d3.selectAll('.country')
         .on('mouseenter', function () {
             // Show tooltip on mouse enter

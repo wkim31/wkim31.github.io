@@ -35,9 +35,11 @@
             <!-- SVG map -->
             <svg id="olympic-map" width="800" height="600">
                 <!-- Define the shapes representing countries -->
-                <rect class="country" id="usa" x="100" y="100" width="100" height="50" fill="blue"/>
-                <rect class="country" id="russia" x="300" y="200" width="100" height="50" fill="red"/>
+                <path class="country" id="usa" fill="blue" d="M100,100 L200,100 L200,150 L100,150 Z"/>
+                <path class="country" id="russia" fill="red" d="M300,200 L400,200 L400,250 L300,250 Z"/>
+                <!-- Add other countries as needed -->
             </svg>
+            <!-- Tooltip -->
             <div id="tooltip" class="tooltip"></div>
         </div>
         <img src = "images/oly_map_FINAL.jpg">
