@@ -1,5 +1,5 @@
-img, p, h1, h2, .divider{
-    width : 100%;
+img, p, h1, h2, .divider, .divider-yellow{
+    width : 120%;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
