@@ -12,7 +12,7 @@
     <body>
         <h1>Uncovering Biases in Olympic Wins</h1>
         <p class = "special">Is Olympic success pure athletic talent, or something more?</p>
-        <p class = "special">By Lena Kim</p>
+        <p class = "special">By: Lena Kim</p>
         <div class = "divider"></div>
         <p> The 2024 Paris Summer Olympics opens this July. Personally, as an avid Track and Field fan, 
             I'm invested in the showdown between Dutch athlete Femke Bol and USA athlete Sydney Mclaughlin-Levrone
@@ -31,6 +31,11 @@
             Olympic medal? </p>
         <div class = "divider-yellow"></div>
         <p> Let's see first: Which countries actually win medals?</p>
+        <svg id="olympic-map" width="800" height="600">
+            <path class="country" id="usa" d="M50,50 L150,50 L150,100 L50,100 Z" fill="blue" />
+            <path class="country" id="russia" d="M200,150 L300,150 L300,200 L200,200 Z" fill="red" />
+        </svg>
+        
         <img src = "images/oly_map_FINAL.jpg">
         <p> From the map above, it is clear that the modern Olympic hegemons take the form of the USA and Russia, 
             with China and Germany close runners-up. 
@@ -98,7 +103,7 @@
         <div id = "myChart"></div>
         
         <div class = "page_content"></div>
-        <script src="interactive.js"></script>
+        <script src="scripts/interactive.js"></script>
 
     </body>
 </html>
