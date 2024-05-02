@@ -22,7 +22,7 @@ h1, h2 {
 
 .divider {
     height: 2px;
-    background-color: #0081C8;
+    background: linear-gradient(to right, #deebf7, #3182bd 100%);
     margin-top: 12px;
     margin-bottom: 12px;
 }
