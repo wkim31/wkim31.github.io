@@ -1,4 +1,4 @@
-img, p, h1, h2, .divider, .divider-yellow{
+img, p, h1, h2, .divider, .divider-yellow, .divider-black{
     width : 120%;
     max-width: 600px;
     margin-left: auto;
@@ -47,6 +47,13 @@ h1, h2 {
 .divider-yellow {
     height: 2px;
     background: linear-gradient(to right, #ffffd4, #FCB131 100%);
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.divider-black{
+    height: 2px;
+    background: linear-gradient(to right, #252525, #d9d9d9 100%);
     margin-top: 12px;
     margin-bottom: 12px;
 }
