@@ -10,6 +10,14 @@ img {
     padding: 15px 0px;
 }
 
+img.medals-image {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 0px;
+}
+
 p {
     font-size: 18px;
     line-height: 1.4; 
@@ -71,3 +79,4 @@ h1, h2 {
     margin-top: 12px;
     margin-bottom: 12px;
 }
+
